@@ -4,9 +4,9 @@ from sighnupui import *
 import sys
 import pymysql.cursors
 
-class Window(QMainWindow):
+class SignUpWindow(QMainWindow):
     def __init__(self, parent=None):
-        super(Window, self).__init__(parent)
+        super(SignUpWindow, self).__init__(parent)
         self.ui = Ui_Sign_up()
         self.ui.setupUi(self)
         self.db_connection()
@@ -111,19 +111,11 @@ class Window(QMainWindow):
             connection.commit()
 
 
-
-
-
-
-
-
-
-
-def main():
+def mainSignUP():
     app = QApplication([])
-    window = Window()
+    window = SignUpWindow()
     window.show()
     sys.exit(app.exec())
 
 if __name__ == "__main__":
-    main()
+    mainSignUP()
