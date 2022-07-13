@@ -12,10 +12,10 @@ class PolyWindow(QMainWindow):
         self.ui.setupUi(self)
         self.db_connection()
         self.createTable()
-        self.showQuestion()
         self.mainPoly()
         self.answers = []
-        self.ui.btnOk.clicked.connect(self.addPressed)
+        self.showQuestion()
+        self.ui.btnOk.clicked.connect(self.ansTextDis)
         self.ansTextDis()
         self.ui.btnaddQuestion.clicked.connect(self.addQuestionPressed)
         self.ui.btnadd.clicked.connect(self.addQuestion)

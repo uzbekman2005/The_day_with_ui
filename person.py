@@ -52,6 +52,15 @@ class Person:
     def get_userID(self):
         return int(self.u_id)
 
+    def setScore(self, score):
+        try:
+            sql = f"update users set score = {score + self.get_score()}"
+            with self.connection.cursor() as cursor:
+                cursor.execute(sql)
+        except Exception as ex:
+            print(ex)
+        finally:
+            self.connection.commit()
 
 # def main():
 #     man = Person(1)

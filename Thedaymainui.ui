@@ -41,8 +41,8 @@
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>80</y>
+      <x>690</x>
+      <y>70</y>
       <width>321</width>
       <height>331</height>
      </rect>
@@ -108,6 +108,24 @@
      </property>
      <property name="text">
       <string>Polichudis</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnsudoko">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>200</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Sudoko</string>
      </property>
     </widget>
    </widget>

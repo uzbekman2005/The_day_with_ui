@@ -5,6 +5,7 @@ from loginmain import *
 from main1516 import *
 from Thedaymainui import *
 from person import *
+from sudokom import *
 
 class Window(QMainWindow):
     def __init__(self, parent=None):
@@ -20,6 +21,12 @@ class Window(QMainWindow):
         self.ui.btn1516.clicked.connect(self.puzzle1516Pressed)
         self.currentUser()
         self.ui.btnupdate.clicked.connect(self.updatePressed)
+        self.ui.btnsudoko.clicked.connect(self.sudokoPressed)
+
+    def sudokoPressed(self):
+        if self.current_user is not None:
+            self.sudoko = SudokoWindow(self.current_user)
+            self.sudoko.show()
 
     def updatePressed(self):
         if self.current_user is not None:

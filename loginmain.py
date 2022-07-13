@@ -58,8 +58,6 @@ class LoginWindow(QMainWindow):
     def getCurrentUser(self):
         return self.current_user
 
-
-
 def main():
     app = QApplication([])
     window = LoginWindow()
